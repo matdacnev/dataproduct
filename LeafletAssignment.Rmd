@@ -32,5 +32,8 @@ myMap = leaflet() %>% addTiles() %>% addMarkers(lat=46.1970432, lng=6.1424338, p
 myMap
 ```
 
+## Conclusion
+
+Leaflet allows users to easly add interactive maps to an R markdown document.
 
 

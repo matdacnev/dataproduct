@@ -1,0 +1,36 @@
+---
+title: "Leaflet Assignment"
+author: "Mat Dac"
+date: "December 28, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include=T, echo=T, warning=F, message=F, cache=T)
+setwd("~/Work/Training/DataProdCoursera.R")
+```
+
+## Goal
+
+The goal of this assignment is to create a web page with an interactive map. To do this, I wrote an R markdown document and used the Leaflet package.
+
+## Libraries
+
+The following library is used for this assignment:
+
+```{r library}
+library(leaflet)
+```
+
+## Map
+
+The map shows the location of the University of Geneva and clicking on the pin will reveal the university home page URL. I added a mini map showing the region around the main map.
+
+```{r map}
+myPopup = "<a href='http://www.unige.ch/'>University of Geneva</a>"
+myMap = leaflet() %>% addTiles() %>% addMarkers(lat=46.1970432, lng=6.1424338, popup=myPopup) %>% addMiniMap()
+myMap
+```
+
+
+
